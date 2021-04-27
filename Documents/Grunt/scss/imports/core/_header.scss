@@ -1,0 +1,221 @@
+.header {
+  img {
+    display: block;
+    margin: auto;
+    min-width: 100%;
+  }
+  &.--active {
+    opacity: 0.9;
+    background-image: linear-gradient($black-cl, rgb(201, 182, 167));
+  }
+  .menu {
+    z-index: 99999;
+    transition: all 0.5s;
+    height: 0;
+    overflow: hidden;
+    background-color: black;
+    position: absolute;
+    width: 100vw;
+    height: 0vh;
+    top: 60px;
+    left: 0;
+
+    ul {
+      padding-bottom: 120px;
+      height: 100%;
+      @include midflex;
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 40px 0;
+        a {
+          color: white;
+          @include text(100%, "pr", normal, white, uppercase);
+        }
+      }
+    }
+    &.--active {
+      opacity: 0.9;
+      transition: all 0.5s;
+      height: 100vh;
+      a {
+        opacity: 1;
+      }
+    }
+  }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 80px;
+  .container-fluid {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      .hidden {
+        display: none;
+      }
+    }
+    .navigation {
+      --navPd: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      li {
+        height: 100%;
+        padding: 0 var(--navPd);
+        opacity: 1;
+        .gray {
+          opacity: 0.4;
+        }
+        a {
+          &.active {
+            &::after {
+              transition: all $t;
+              transform: scaleX(1);
+              transform-origin: center right;
+            }
+          }
+          height: 100%;
+          font-family: "pr";
+          color: $white-cl;
+          font-size: 15px;
+          line-height: 22.5px;
+          letter-spacing: 1px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 32%;
+            height: 1px;
+            width: 100%;
+            background-color: #def;
+            transition: all $t;
+            transform: scaleX(0);
+            transform-origin: center left;
+          }
+        }
+        &:hover {
+          a {
+            &::after {
+              transition: all $t;
+              transform: scaleX(1);
+              transform-origin: center right;
+            }
+          }
+        }
+      }
+    }
+    .language__text {
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-family: pr;
+      line-height: normal;
+      color: #fff;
+      text-transform: uppercase;
+      span {
+        margin-right: 6px;
+      }
+      i {
+        margin-top: 5px;
+        display: block;
+        img {
+          width: 10px;
+        }
+      }
+    }
+    .language__drop {
+      position: absolute;
+      width: 100px;
+      height: 0;
+      background-color: $white-cl;
+      right: 30px;
+      margin-top: 15px;
+      flex-direction: column;
+      @include midflex();
+      transition: all $t;
+      // transform: scaleX(0);
+      overflow: hidden;
+      a {
+        color: $black-cl;
+        padding: 15px 0;
+        padding-bottom: 10px;
+      }
+      &.--active {
+        flex-direction: column;
+        @include midflex();
+        opacity: 0.7;
+        transition: all $t;
+        height: 180px;
+        // transform: scaleX(1);
+      }
+    }
+    .btnmenu {
+      display: none;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      transition: all $t;
+      span {
+        transition: all $t;
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include mid;
+        background-color: $white-cl;
+      }
+      &::before,
+      &::after {
+        transition: all $t;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        @include mid;
+        background-color: $white-cl;
+      }
+      &::after {
+        top: 17px;
+      }
+      &::before {
+        top: 3px;
+      }
+      &.clicked {
+        span {
+          display: none;
+        }
+        &::before {
+          top: 50%;
+          left: 0;
+          transform: translate(-50% -50%);
+          transform-origin: center;
+          transform: rotate(45deg);
+          transition: all $t;
+          width: 70%;
+        }
+        &::after {
+          top: 50%;
+          width: 70%;
+          left: 0;
+          transform: translate(-50% -50%);
+          transform-origin: center;
+          transform: rotate(-45deg);
+          transition: all $t;
+        }
+      }
+    }
+  }
+}

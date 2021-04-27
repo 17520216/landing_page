@@ -1,0 +1,117 @@
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-layout {
+  background-color: #fff;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-pro-sider-menu-sider {
+  box-shadow: none;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-layout-header {
+  height: 0;
+  line-height: 50px;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-menu-dark.ant-menu-inline .ant-menu-item {
+  display: flex;
+  place-items: center;
+  height: 63px;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-menu-dark.ant-menu-inline .ant-menu-item div {
+  display: flex;
+  place-items: center;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .ant-menu-dark.ant-menu-inline .ant-menu-item .antd-pro-layouts-management-layout-andminSider {
+  display: flex;
+  place-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: pre-wrap;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .textInSider {
+  display: flex;
+  place-items: center;
+}
+.antd-pro-layouts-management-layout-adminLayoutContainer .textInSider span {
+  word-break: break-all;
+}
+.antd-pro-layouts-management-layout-siderIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 14px;
+}
+.antd-pro-layouts-management-layout-adminLayoutLogo {
+  width: 119px;
+  height: 36px;
+  margin: 30px 0;
+}
+.antd-pro-layouts-management-layout-adminLayoutHeader {
+  height: 80px;
+  background-color: #f5f6fa;
+}
+.antd-pro-layouts-management-layout-pageName {
+  margin-left: 32px;
+  color: #1a1919;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+.antd-pro-layouts-management-layout-andminSider {
+  width: 167px;
+  height: 42px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+.anticon {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+.ant-popover-content {
+  width: 100%;
+}
+.ant-popover-content .ant-popover-arrow {
+  display: none;
+}
+.antd-pro-layouts-log-out-log-out-dropDownSignOut {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 240px;
+  height: 60px;
+  padding-top: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 60px;
+  text-align: center;
+  background-color: #373d48;
+  border-top: 1px solid #fff;
+  border-right: none;
+}
+.antd-pro-layouts-log-out-log-out-adminAvatar {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 15px;
+  line-height: 30px;
+}
+.antd-pro-layouts-log-out-log-out-adminAvatar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.antd-pro-layouts-log-out-log-out-iconLogOut {
+  width: 39px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+
+/*# sourceMappingURL=layouts__ManagementLayout.chunk.css.map*/

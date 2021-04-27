@@ -1,0 +1,52 @@
+.practice-gsap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  font-family: pr;
+  .home {
+    padding: 100px 30px;
+    .title {
+      cursor: pointer;
+      font-size: 80px;
+    }
+    .info {
+      max-width: 600px;
+    }
+  }
+  .menu {
+    ul {
+      li {
+        cursor: pointer;
+      }
+    }
+    font-size: 80px;
+    padding-top: 100px;
+  }
+  .btn {
+    display: flex;
+    justify-content: space-around;
+    span {
+      &:hover {
+        background-color: black;
+        color: blanchedalmond;
+        transition: 0.4s;
+      }
+      transition: 0.4s;
+      cursor: pointer;
+      align-items: center;
+      display: block;
+      color: #585454;
+      background-color: #ddd;
+      width: 150px;
+      height: 40px;
+      align-self: center;
+      font-size: 30px;
+      border: 1px solid white;
+      text-align: center;
+      font-family: pr;
+    }
+  }
+}

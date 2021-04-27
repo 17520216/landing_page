@@ -1,0 +1,59 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+html,
+body {
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    @include text($fz-text, fmain, $lh-text, $text-cl, none);
+    background: $white-cl;
+    position: relative;
+    @include custom-scrollbar();
+    .mainwrapper {
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+    }
+    @include desktop {
+        
+    }
+    @include tablet {
+        
+    }
+    @include mobile {
+        .footer{
+            .container{
+                
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+.back-to-top{
+    display: none;
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+    &.--active{
+        display: block;
+    }
+    img{
+        
+        height: 30px;
+        width: 30px;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}

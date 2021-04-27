@@ -1,0 +1,235 @@
+a {
+  color: $text-cl;
+  text-decoration: none;
+  display: block;
+}
+// img {
+//     display: block;
+//     margin: auto;
+//     min-width: 100%;
+// }
+strong {
+  font-family: bb;
+}
+
+.-lv1 {
+  @include text(100px, b, 100px, $white-cl, none);
+  font-weight: normal;
+  margin: 0;
+  a {
+    @include text(100px, g, 100px, $white-cl, none);
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
+}
+
+.button {
+}
+
+.arrow {
+}
+.--button-main {
+  img {
+    display: block;
+    margin: auto;
+    min-width: 100%;
+  }
+  border-radius: 4px;
+  border: 2px solid #fff;
+  padding: 10px 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  &::after {
+    top: 0;
+    left: 0;
+    z-index: -1111;
+    background-color: $yellow-cl;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    @include transform(scaleX(0));
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    transition-duration: 0.2s;
+  }
+  &:hover {
+    &::after {
+      @include transform(scaleX(1));
+      -webkit-transform-origin: right center;
+      -moz-transform-origin: right center;
+      -o-transform-origin: right center;
+      transform-origin: right center;
+      transition-duration: 0.2s;
+    }
+    img {
+      transition: all $t;
+      transform: rotate(360deg) scale(1.9);
+    }
+  }
+  i {
+    img {
+      cursor: pointer;
+      transition: all $t;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  span {
+    font-size: 11px;
+    font-family: pb;
+    line-height: 30.2px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-left: 15px;
+  }
+}
+.--button-main.--effect {
+  @keyframes leftright {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+  img {
+    transform: rotate(0);
+    transition: all $t;
+    animation: leftright 1s ease forwards infinite;
+  }
+}
+.btn-main {
+  display: flex;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: pb;
+  line-height: normal;
+  color: #010101;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-right: 10px;
+  span {
+    padding-right: 15px;
+  }
+}
+.textbox {
+  margin: 20px 0;
+  .title-main {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: pb;
+    line-height: normal;
+    color: #222;
+    text-transform: uppercase;
+  }
+  .title-main.--white {
+    color: #fff;
+  }
+  .title-main.--with-line {
+    &:before {
+      content: "";
+      width: 80px;
+      height: 2px;
+      background-color: #010101;
+      position: relative;
+      margin-right: 10px;
+      left: -20px;
+    }
+  }
+  .title-main.--yellow {
+    color: #bea67c;
+  }
+  .des {
+    padding: 20px 0 40px 0px;
+    font-size: 16px;
+    font-family: pr;
+    line-height: normal;
+    color: #464646;
+    text-transform: none;
+  }
+  .des.--white {
+    color: #fff;
+  }
+}
+.textbox.--textright {
+  padding-left: 20px;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+  .title-main {
+    flex-direction: row-reverse;
+    &:before {
+      margin-left: initial;
+      left: initial;
+      right: -20px;
+      margin-left: 10px;
+    }
+  }
+}
+.textbox.--textcenter {
+  max-width: 460px;
+  margin: auto;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  text-align: center;
+  .title-main {
+    flex-direction: column-reverse;
+    &:before {
+      margin-left: initial;
+      left: initial;
+      width: 60px;
+      margin: 15px auto;
+      background-color: #bea67c;
+    }
+  }
+}
+.btnmore {
+  display: inline-flex;
+  letter-spacing: 2px;
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: pb;
+  line-height: normal;
+  color: #010101;
+  text-transform: uppercase;
+  align-items: center;
+  i {
+    img {
+      margin-left: 2px;
+      position: relative;
+      transform: translateX(0px);
+      transition: $t;
+    }
+  }
+  &:before {
+    content: "";
+    width: 35px;
+    height: 1px;
+    background-color: #bea67c;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &:hover {
+    img {
+      transition: $t;
+      transform: translateX(10px);
+    }
+  }
+}
